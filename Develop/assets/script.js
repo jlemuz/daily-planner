@@ -28,9 +28,5 @@ var tasks = [];
 $('.bi').click(function(){
     taskNum = $(this).attr('id').match(/\d+/)[0];
     task = $('#'+taskNum);
-    task[0].textContent = task[0].value
-    tasks.filter(tasks)
-    tasks.push(taskNum, task[0].value)
-    let uniqueCity = [...new Set(tasks)]
-    console.log(uniqueCity);
+    localStorage.setItem(taskNum, task[0].value)
 });
